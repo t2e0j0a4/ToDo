@@ -13,7 +13,7 @@ function Alert({removeAlertFnc,list,msg,type}) {
     
   return (
     <div className={`myalert myalert-${type}`}>
-        <h2>{msg}</h2>
+        <h5>{msg}</h5>
     </div>
   )
 }

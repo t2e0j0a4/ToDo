@@ -5,10 +5,10 @@
 }
 
 html,body{
-  width: 100%;
-  max-width: 1400px;
-  height: 100%;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: flex-start;
 }
 
 button , input{
@@ -18,80 +18,89 @@ button , input{
 
 .todoApp{
   width: 100%;
-  max-width: 800px;
+  max-width: 90%;
   margin: auto;
-  padding-top: 10px;
-  margin-top: 15px;
+  background-color: rgb(0,0,0,0.8);
+  padding: 15px 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 5px;
 }
 
 #todoHead{
   text-align: center;
+  margin: 5px 0;
+  padding-top: 20px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #formPage{
   display: flex;
   align-items: center;
   justify-content: center;
-
-  text-align: left;
+  flex-direction: column;
   flex-wrap: wrap;
-}
-
-#formPage label{
-  margin: 5px 5px;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 1.5rem;
+  
 }
 
 #formPage input{
-  padding: 5px 10px;
-  background-color: aliceblue;
+  width: 100%;
+  max-width: 50%;
+  padding: 8px 10px;
+  background-color: inherit;
   outline: none;
-  margin: 5px 5px;
+  margin: 10px 0;
+  color: white;
+  border: 1px solid rgb(243, 240, 240);
 }
 
-#formPage button[type="submit"]{
-  padding: 5px 10px;
+#formPage button{
+  padding: 8px 20px;
   outline: none;
-  background-color: aliceblue;
+  background-color: inherit;
   margin: 5px 5px;
+  color: white;
+  border: 2px solid rgb(84, 83, 83);
+  border-bottom: 1.5px solid rgba(99, 98, 98, 0.5);
+
 }
 
-#formPage button[type="button"]{
-  padding: 5px 10px;
-  outline: none;
-  background-color: aliceblue;
-  margin: 5px 5px;
+#formPage button:hover{
+  border: 1.5px solid rgb(95, 95, 95);
+  border-bottom: 2px solid rgba(111, 109, 109, 0.5);
 }
+
 
 .showingAlert{
-  height: 60px;
-  margin: 10px 20px;
+  height: 30px;
+  margin: 10px 0;
 }
 
 .todoList{
   width: 100%;
-  max-width: 700px;
+  max-width: 70%;
   margin: auto;
-  margin-top: 20px;
-  height: auto;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .eachTodo{
+  background-color: rgb(0,0,0,0.5);
   width: 100%;
-  max-width: 700px;
-  height: 100%;
-  border: 2px solid black;
-  margin: 10px;
+  max-width: 90%;
+  border: 2px solid rgb(138, 134, 134);
+  margin: 20px 0;
   padding: 2px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   border-radius: 5px;
 }
 
@@ -100,33 +109,42 @@ button , input{
   margin : 5px 10px;
   word-break: break-all;
   text-transform: capitalize;
+  color: white;
 }
 
 .eachTodo .todoBtns{
+  width: 100%;
+  max-width: 50%;
+  margin: 10px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 3px;
-  width: 15%;
-  height: 30px;
+  flex-wrap: wrap;
 }
 
 i.edit-btn{
-  color: rgb(64, 51, 8);
-  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
   cursor: pointer;
+  background-color: rgb(0,0,0,1);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 i.del-btn{
-  color: red;
-  font-size: 1.4rem;
+  color: rgb(209, 25, 25);
+  font-size: 1rem;
   cursor: pointer;
+  background-color: rgb(0,0,0,1);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 .myalert{
   width: 100%;
-  max-width: 400px;
-  padding: 5px 0px 2px 0;
+  max-width: 40%;
+  padding: 2px;
+  font-size: 10px;
   margin:auto;
   text-align: center;
   display: flex;
@@ -139,9 +157,11 @@ i.del-btn{
 .myalert-danger{
   border: 2px solid red;
   color: red;
+  font-size: small;
 }
 
 .myalert-success{
   border: 2px solid green;
   color: green;
+  font-size: small;
 }

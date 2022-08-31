@@ -77,7 +77,6 @@ function App() {
       </div>
       <h1 id="todoHead">Todo's List</h1>
       <form id="formPage" onSubmit={todoSubmit}>
-        <label htmlFor="todoTitle">Title</label>
         <input type="text" name="Todo Input" id="todoTitle" className="title" value={input} onChange={(e)=>setInput(e.target.value)} placeholder="Todo's Name"/>
         <button type="submit">{edit ? 'Edit' : 'Add'}</button>
         {list.length > 0 && <button type="button" onClick={clearAll}>Clear All</button>}
